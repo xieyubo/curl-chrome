@@ -1,0 +1,12 @@
+[submodule "src/curl"]
+	path = src/curl
+	url = https://github.com/xieyubo/curl-chrome-curl.git
+[submodule "src/boringssl"]
+	path = src/boringssl
+	url = https://github.com/xieyubo/curl-chrome-boringssl.git
+[submodule "src/brotli"]
+	path = src/brotli
+	url = https://github.com/xieyubo/curl-chrome-brotli.git
+[submodule "src/nghttp2"]
+	path = src/nghttp2
+	url = https://github.com/xieyubo/curl-chrome-nghttp2.git
