@@ -30,10 +30,13 @@ execute_process(
 )
 
 make_avaliable(boringssl)
-make_avaliable(brotli)
+make_avaliable(brotli
+    OPTIONS -DBUILD_SHARED_LIBS=OFF
+)
 make_avaliable(nghttp2
-    OPTIONS -DENABLE_STATIC_LIB=ON
-            -DENABLE_SHARED_LIB=OFF
+    OPTIONS -DBUILD_STATIC_LIBS=ON
+            -DBUILD_SHARED_LIBS=OFF
+            -DBUILD_TESTING=OFF
 )
 make_avaliable(curl
     OPTIONS -DBUILD_SHARED_LIBS=OFF
