@@ -12,7 +12,7 @@ COPY . .
 
 WORKDIR /build
 
-RUN cmake -GNinja .. /src && \
+RUN cmake -GNinja .. && \
     ninja && \
     strip -s curl/installed/bin/curl -o /curl
 
