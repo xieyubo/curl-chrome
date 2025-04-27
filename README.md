@@ -1,4 +1,6 @@
-This project is inspired from https://github.com/lwthiker/curl-impersonate.
+Curl-Chrome
+===
+Send HTTP request like a real chrome browser. This project is inspired from https://github.com/lwthiker/curl-impersonate.
 
 ## Build
 
