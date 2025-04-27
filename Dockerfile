@@ -18,4 +18,4 @@ RUN cmake -GNinja .. && \
 
 FROM scratch
 COPY --from=build /curl /curl 
-ENTRYPOINT ["/curl", "--chrome"]
+ENTRYPOINT ["/curl"]

@@ -10,3 +10,6 @@
 [submodule "src/nghttp2"]
 	path = src/nghttp2
 	url = https://github.com/xieyubo/curl-chrome-nghttp2.git
+[submodule "src/zlib"]
+	path = src/zlib
+	url = https://github.com/xieyubo/curl-chrome-zlib.git

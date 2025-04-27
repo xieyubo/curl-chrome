@@ -8,4 +8,4 @@ Send HTTP request like a real chrome browser. This project is inspired from http
 
 ## Run
 
-    docker run curl-chrome -ksSL https://www.wikipedia.org
+    docker run curl-chrome --chrome -ksSL https://www.wikipedia.org
