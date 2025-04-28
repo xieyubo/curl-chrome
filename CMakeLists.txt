@@ -46,6 +46,7 @@ make_avaliable(curl
             -DCURL_BROTLI=ON -DBrotli_ROOT=${brotli_INSTALLED_DIR}
             -DUSE_NGHTTP2=ON -DNGHTTP2_ROOT=${nghttp2_INSTALLED_DIR}
             -DUSE_ZLIB=ON -DZLIB_ROOT=${zlib_INSTALLED_DIR}
+            -DBUILD_LIBCURL_DOCS=OFF
             -DCURL_STATIC_EXE=ON
             -DCMAKE_C_FLAGS="-DCURL_CUSTOM_NAME=curl-chrome;-DCURL_COMMIT_ID=${GIT_SHA1}"
     DEPENDS boringssl brotli nghttp2 zlib
