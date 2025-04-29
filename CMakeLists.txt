@@ -39,6 +39,7 @@ make_avaliable(nghttp2
             -DBUILD_TESTING=OFF
 )
 make_avaliable(zlib)
+make_avaliable(zstd)
 make_avaliable(curl
     OPTIONS -DBUILD_SHARED_LIBS=OFF
             -DENABLE_WEBSOCKETS=ON
@@ -46,10 +47,11 @@ make_avaliable(curl
             -DCURL_BROTLI=ON -DBrotli_ROOT=${brotli_INSTALLED_DIR}
             -DUSE_NGHTTP2=ON -DNGHTTP2_ROOT=${nghttp2_INSTALLED_DIR}
             -DUSE_ZLIB=ON -DZLIB_ROOT=${zlib_INSTALLED_DIR}
+            -DCURL_ZSTD=ON -DZstd_ROOT=${zstd_INSTALLED_DIR}
             -DBUILD_LIBCURL_DOCS=OFF
             -DCURL_STATIC_EXE=ON
             -DCMAKE_C_FLAGS="-DCURL_CUSTOM_NAME=curl-chrome;-DCURL_COMMIT_ID=${GIT_SHA1}"
-    DEPENDS boringssl brotli nghttp2 zlib
+    DEPENDS boringssl brotli nghttp2 zlib zstd
 )
 
 add_custom_target(default ALL
