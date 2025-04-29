@@ -3,6 +3,7 @@ FROM alpine:3 AS build
 RUN apk add \
         ninja \
         g++ \
+        git \
         cmake \
         go \
         perl \
