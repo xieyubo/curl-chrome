@@ -48,8 +48,10 @@ make_avaliable(curl
             -DUSE_NGHTTP2=ON -DNGHTTP2_ROOT=${nghttp2_INSTALLED_DIR}
             -DUSE_ZLIB=ON -DZLIB_ROOT=${zlib_INSTALLED_DIR}
             -DCURL_ZSTD=ON -DZstd_ROOT=${zstd_INSTALLED_DIR}
-            -DBUILD_LIBCURL_DOCS=OFF
+            -DBUILD_LIBCURL_DOCS=OFF -DBUILD_MISC_DOCS=OFF -DENABLE_CURL_MANUAL=OFF
             -DCURL_STATIC_EXE=ON
+            -DUSE_HTTPSRR=ON
+            -DUSE_ECH=ON -DHAVE_ECH=ON
             -DCMAKE_C_FLAGS="-DCURL_CUSTOM_NAME=curl-chrome;-DCURL_COMMIT_ID=${GIT_SHA1}"
     DEPENDS boringssl brotli nghttp2 zlib zstd
 )
