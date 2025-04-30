@@ -42,16 +42,17 @@ make_avaliable(zlib)
 make_avaliable(zstd)
 make_avaliable(curl
     OPTIONS -DBUILD_SHARED_LIBS=OFF
-            -DENABLE_WEBSOCKETS=ON
             -DCURL_USE_OPENSSL=ON -DOpenSSL_ROOT=${boringssl_INSTALLED_DIR}
             -DCURL_BROTLI=ON -DBrotli_ROOT=${brotli_INSTALLED_DIR}
             -DUSE_NGHTTP2=ON -DNGHTTP2_ROOT=${nghttp2_INSTALLED_DIR}
-            -DUSE_ZLIB=ON -DZLIB_ROOT=${zlib_INSTALLED_DIR}
+            -DCURL_ZLIB=ON -DZLIB_ROOT=${zlib_INSTALLED_DIR}
             -DCURL_ZSTD=ON -DZstd_ROOT=${zstd_INSTALLED_DIR}
             -DBUILD_LIBCURL_DOCS=OFF -DBUILD_MISC_DOCS=OFF -DENABLE_CURL_MANUAL=OFF
             -DCURL_STATIC_EXE=ON
             -DUSE_HTTPSRR=ON
             -DUSE_ECH=ON -DHAVE_ECH=ON
+            -DCURL_USE_LIBPSL=OFF
+            -DCURL_USE_PKGCONFIG=OFF
             -DCMAKE_C_FLAGS="-DCURL_CUSTOM_NAME=curl-chrome;-DCURL_COMMIT_ID=${GIT_SHA1}"
     DEPENDS boringssl brotli nghttp2 zlib zstd
 )
